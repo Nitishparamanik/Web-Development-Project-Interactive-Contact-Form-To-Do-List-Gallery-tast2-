@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Flexbox Navigation -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">WebDev Project</div>
+                <ul class="nav-links">
+                    <li><a href="#form">Contact</a></li>
+                    <li><a href="#todo">To-Do List</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content with CSS Grid -->
+        <main class="main-content">
+            <!-- Contact Form Section -->
+            <section id="form" class="form-section">
+                <h2>Contact Form</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name*</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                        <div class="error" id="name-error">Please enter your name</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <div class="error" id="email-error">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message*</label>
+                        <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+                        <div class="error" id="message-error">Please enter your message</div>
+                    </div>
+                    
+                    <button type="submit">Submit</button>
+                    <div class="success-message" id="form-success">Thank you! Your message has been sent successfully.</div>
+                </form>
+            </section>
+
+            <!-- To-Do List Section -->
+            <section id="todo" class="todo-section">
+                <h2>To-Do List</h2>
+                <div class="todo-input-group">
+                    <input type="text" id="todo-input" placeholder="Add a new task">
+                    <button id="add-todo">Add Task</button>
+                </div>
+                <div class="todo-stats">
+                    <span id="tasks-count">0 tasks</span>
+                    <button id="clear-completed" class="secondary-btn">Clear Completed</button>
+                </div>
+                <ul class="todo-list" id="todo-list">
+                    <!-- To-Do items will be added here dynamically -->
+                </ul>
+            </section>
+        </main>
+
+        <!-- Image Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <h2>Image Gallery</h2>
+            <div class="gallery-controls">
+                <input type="file" id="image-upload" accept="image/*" multiple>
+                <label for="image-upload" class="upload-btn">Add Images</label>
+            </div>
+            <div class="gallery" id="gallery">
+                <!-- Sample placeholder images -->
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/300x200?nature" alt="Nature Image">
+                    <div class="image-overlay">
+                        <span class="image-title">Nature</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/300x200?city" alt="City Image">
+                    <div class="image-overlay">
+                        <span class="image-title">City</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/300x200?technology" alt="Technology Image">
+                    <div class="image-overlay">
+                        <span class="image-title">Technology</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://source.unsplash.com/random/300x200?abstract" alt="Abstract Image">
+                    <div class="image-overlay">
+                        <span class="image-title">Abstract</span>
+                    </div>
+                </div>
+            </div>
+            <div id="lightbox" class="lightbox">
+                <span class="close-lightbox">&times;</span>
+                <img id="lightbox-img" class="lightbox-content">
+                <div id="lightbox-caption"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About This Project</h3>
+                    <p>This project demonstrates intermediate HTML, CSS, and JavaScript skills including form validation, responsive design, and DOM manipulation.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#form">Contact Form</a></li>
+                        <li><a href="#todo">To-Do List</a></li>
+                        <li><a href="#gallery">Image Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Web Development Project. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
